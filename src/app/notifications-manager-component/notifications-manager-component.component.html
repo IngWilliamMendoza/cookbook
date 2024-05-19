@@ -1,0 +1,11 @@
+<div class="notif-manager">
+    <div class="notif-manager__count">
+        Notifications count: {{ notificationsCount$ | async }}
+    </div>
+    <div class="notif-manager__buttons">
+        <button (click)="addNotification()">Add notification</button>
+        <button (click)="removeNotification()">Remove notification</button>
+        <button (click)="resetNotifications()">Clear notifications</button>
+    </div>
+
+</div>
