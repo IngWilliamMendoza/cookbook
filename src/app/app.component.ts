@@ -1,9 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NotificationsButtonComponent } from './notifications-button-component/notifications-button-component.component';
-import { NotificationsManagerComponent } from './notifications-manager-component/notifications-manager-component.component';
-import { VersionControlComponent } from './cc-ng-on-changes/version-control/version-control.component';
-import { GalleryComponent } from './gallery/gallery.component';
+import { NotificationsButtonComponent } from './components/notifications-button-component/notifications-button-component.component';
+import { NotificationsManagerComponent } from './components/notifications-manager-component/notifications-manager-component.component';
+import { VersionControlComponent } from './components/cc-ng-on-changes/version-control/version-control.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 // import { VersionControlComponent } from './cc-setters/version-control/version-control.component';
 
 @Component({

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { first, Observable, Observer } from 'rxjs';
-import { NotificationService } from '../services/notification-service.service';
+import { NotificationService } from '../../services/notification-service.service';
 import { AsyncPipe } from '@angular/common';
 
 @Component({
