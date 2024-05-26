@@ -4,6 +4,9 @@ import { NotificationsButtonComponent } from './components/notifications-button-
 import { NotificationsManagerComponent } from './components/notifications-manager-component/notifications-manager-component.component';
 import { VersionControlComponent } from './components/cc-ng-on-changes/version-control/version-control.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { SocialCardType } from './constants/social-card-type';
+import { CommonModule } from '@angular/common';
+import { SocialCardComponent } from './dynamic-component/social-card/social-card.component';
 // import { VersionControlComponent } from './cc-setters/version-control/version-control.component';
 
 @Component({
@@ -11,10 +14,12 @@ import { GalleryComponent } from './components/gallery/gallery.component';
   standalone: true,
   imports: [
     RouterOutlet, 
+    CommonModule,
     NotificationsManagerComponent, 
     NotificationsButtonComponent, 
     VersionControlComponent,
-    GalleryComponent
+    GalleryComponent,
+    SocialCardComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -32,12 +37,21 @@ export class AppComponent {
   //   gallery.pictures.shift();
   // }
 
-  addNewPicture() {
-    this.gallery.pictures.unshift(this.gallery.generateImage());
-  }
+  // addNewPicture() {
+  //   this.gallery.pictures.unshift(this.gallery.generateImage());
+  // }
 
-  removeFirstPicture() {
-    this.gallery.pictures.shift();
+  // removeFirstPicture() {
+  //   this.gallery.pictures.shift();
+  // }
+
+  
+  selectedCardType: SocialCardType;
+  cardTypes = SocialCardType;
+
+  setCardType(type: SocialCardType) {
+    this.selectedCardType = type;
+    console.log('Selected card type:', SocialCardType[type]);
   }
 
 }

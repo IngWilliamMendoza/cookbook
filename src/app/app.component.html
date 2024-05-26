@@ -1,4 +1,3 @@
-
 <!-- <app-notifications-button-component></app-notifications-button-component> -->
 <!-- <app-notifications-manager-component></app-notifications-manager-component> -->
 
@@ -6,20 +5,50 @@
 
 <!-- <app-version-control></app-version-control> -->
 
+<!-- <div class="toolbar" role="banner">
+  <img width="40" alt="Angular Logo"
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+  <span>Accessing child component using Template Variables</span>
+  <div class="spacer"></div>
+</div>
+
+<div class="content" role="main">
+  <div class="gallery-actions">
+    <button class="btn btn-primary" (click)="addNewPicture()">Add Picture</button>
+    <button class="btn btn-danger" (click)="removeFirstPicture()">Remove First</button>
+  </div>
+  <app-gallery #gallery></app-gallery>
+</div> -->
+
+<!-- Toolbar -->
 <div class="toolbar" role="banner">
-    <img
-      width="40"
-      alt="Angular Logo"
-      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-    />
-    <span>Accessing child component using Template Variables</span>
-    <div class="spacer"></div>
-  </div>
-  
-  <div class="content" role="main">
-    <div class="gallery-actions">
-      <button class="btn btn-primary" (click)="addNewPicture()">Add Picture</button>
-      <button class="btn btn-danger" (click)="removeFirstPicture()">Remove First</button>
+  <img
+    width="40"
+    alt="Angular Logo"
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+  />
+  <span>Creating your first Dynamic component in Angular</span>
+  <div class="spacer"></div>
+</div>
+
+<div class="content" role="main">
+  <div class="type-picker">
+    <h5>Pick Social Card Type</h5>
+    <div class="type-picker__options">
+      <div class="type-picker__options__option" (click)="setCardType(cardTypes.Facebook)">
+        <button class="btn" [ngClass]="selectedCardType === cardTypes.Facebook ? 'btn-primary' : 'btn-light'">
+          <div class="icon-facebook"></div>
+          Facebook
+        </button>
+      </div>
+      <div class="type-picker__options__option" (click)="setCardType(cardTypes.Twitter)">
+        <button class="btn" [ngClass]="selectedCardType === cardTypes.Twitter ? 'btn-primary' : 'btn-light'">
+          <div class="icon-twitter"></div>
+          Twitter
+        </button>
+      </div>
     </div>
-    <app-gallery #gallery></app-gallery>
   </div>
+  <app-social-card [type]="selectedCardType"></app-social-card>
+</div>
+
