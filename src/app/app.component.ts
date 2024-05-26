@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NotificationsButtonComponent } from './notifications-button-component/notifications-button-component.component';
 import { NotificationsManagerComponent } from './notifications-manager-component/notifications-manager-component.component';
 import { VersionControlComponent } from './cc-ng-on-changes/version-control/version-control.component';
+import { GalleryComponent } from './gallery/gallery.component';
 // import { VersionControlComponent } from './cc-setters/version-control/version-control.component';
 
 @Component({
@@ -12,11 +13,31 @@ import { VersionControlComponent } from './cc-ng-on-changes/version-control/vers
     RouterOutlet, 
     NotificationsManagerComponent, 
     NotificationsButtonComponent, 
-    VersionControlComponent
+    VersionControlComponent,
+    GalleryComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'cookbook';
+
+  @ViewChild(GalleryComponent) gallery: GalleryComponent;
+
+  // addNewPicture(gallery: GalleryComponent) {
+  //   gallery.pictures.unshift(gallery.generateImage());
+  // }
+
+  // removeFirstPicture(gallery: GalleryComponent) {
+  //   gallery.pictures.shift();
+  // }
+
+  addNewPicture() {
+    this.gallery.pictures.unshift(this.gallery.generateImage());
+  }
+
+  removeFirstPicture() {
+    this.gallery.pictures.shift();
+  }
+
 }
