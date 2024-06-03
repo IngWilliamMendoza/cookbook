@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges, ViewChild, ViewContainerRef } from '@angular/core';
-import { SocialCardType } from '../../constants/social-card-type';
+import { SocialCardType } from '../../../../constants/social-card-type';
 import { CommonModule } from '@angular/common';
 import { FbCardComponent } from '../fb-card/fb-card.component';
 import { TwitterCardComponent } from '../twitter-card/twitter-card.component';

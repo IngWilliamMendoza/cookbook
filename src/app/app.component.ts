@@ -1,12 +1,14 @@
 import { Component, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NotificationsButtonComponent } from './components/notifications-button-component/notifications-button-component.component';
-import { NotificationsManagerComponent } from './components/notifications-manager-component/notifications-manager-component.component';
-import { VersionControlComponent } from './components/cc-ng-on-changes/version-control/version-control.component';
-import { GalleryComponent } from './components/gallery/gallery.component';
+
 import { SocialCardType } from './constants/social-card-type';
 import { CommonModule } from '@angular/common';
-import { SocialCardComponent } from './dynamic-component/social-card/social-card.component';
+import { SocialCardComponent } from './components/components-comuncation/dynamic-component/social-card/social-card.component';
+import { ApparenceDirectiveComponent } from './components/directivex/apparence-directive/apparence-directive.component';
+import { NotificationsManagerComponent } from './components/components-comuncation/notifications-manager-component/notifications-manager-component.component';
+import { NotificationsButtonComponent } from './components/components-comuncation/notifications-button-component/notifications-button-component.component';
+import { VersionControlComponent } from './components/components-comuncation/cc-ng-on-changes/version-control/version-control.component';
+import { GalleryComponent } from './components/components-comuncation/gallery/gallery.component';
 // import { VersionControlComponent } from './cc-setters/version-control/version-control.component';
 
 @Component({
@@ -19,7 +21,8 @@ import { SocialCardComponent } from './dynamic-component/social-card/social-card
     NotificationsButtonComponent, 
     VersionControlComponent,
     GalleryComponent,
-    SocialCardComponent
+    SocialCardComponent,
+    ApparenceDirectiveComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -45,13 +48,13 @@ export class AppComponent {
   //   this.gallery.pictures.shift();
   // }
 
-  
-  selectedCardType: SocialCardType;
-  cardTypes = SocialCardType;
+  // selectedCardType: SocialCardType;
+  // cardTypes = SocialCardType;
 
-  setCardType(type: SocialCardType) {
-    this.selectedCardType = type;
-    console.log('Selected card type:', SocialCardType[type]);
-  }
+  // setCardType(type: SocialCardType) {
+  //   this.selectedCardType = type;
+  //   console.log('Selected card type:', SocialCardType[type]);
+  // }
+
 
 }
