@@ -1,0 +1,23 @@
+<div class="content" role="main">
+    <div class="content__toggle-actions">
+        <h4 class="content__toggle-actions__heading">Visibility = {{visibility}}</h4>
+        <button class="btn content__toggle-actions__action"
+            [ngClass]="visibility === VISIBILITY.On ? 'btn-primary' : 'btn-light'"
+            (click)="setVisibility(VISIBILITY.On)">
+            Visibility On
+        </button>
+        <button class="btn content__toggle-actions__action"
+            [ngClass]="visibility === VISIBILITY.Off ? 'btn-primary' : 'btn-light'"
+            (click)="setVisibility(VISIBILITY.Off)">
+            Visibility Off
+        </button>
+    </div>
+
+    <div class="page-section" id="resources" *appIfNot="visibility === VISIBILITY.On">
+        <!-- Resources -->
+        <h2>Content to show when visibility is off</h2>
+    </div>
+
+</div>
+
+<router-outlet></router-outlet>

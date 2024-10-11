@@ -9,21 +9,29 @@ import { NotificationsManagerComponent } from './components/components-comuncati
 import { NotificationsButtonComponent } from './components/components-comuncation/notifications-button-component/notifications-button-component.component';
 import { VersionControlComponent } from './components/components-comuncation/cc-ng-on-changes/version-control/version-control.component';
 import { GalleryComponent } from './components/components-comuncation/gallery/gallery.component';
+import { ReadTimeComponent } from "./components/directivex/read-time/read-time.component";
+import { VerticalScrollComponent } from './components/directivex/vertical-scroll/vertical-scroll.component';
+import { IfNotDirectiveComponent } from './components/directivex/if-not-directive/if-not-directive.component';
+import { MultiStructuralDirectivesComponent } from "./components/directivex/multi-structural-directives/multi-structural-directives.component";
 // import { VersionControlComponent } from './cc-setters/version-control/version-control.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet, 
+    RouterOutlet,
     CommonModule,
-    NotificationsManagerComponent, 
-    NotificationsButtonComponent, 
+    NotificationsManagerComponent,
+    NotificationsButtonComponent,
     VersionControlComponent,
     GalleryComponent,
     SocialCardComponent,
-    ApparenceDirectiveComponent
-  ],
+    ApparenceDirectiveComponent,
+    ReadTimeComponent,
+    VerticalScrollComponent,
+    IfNotDirectiveComponent,
+    MultiStructuralDirectivesComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HighlightDirective } from '../../../directives/highlight.directive';
+import { HighlightDirective } from '../../../directives/highlight/highlight.directive';
 
 @Component({
   selector: 'app-apparence-directive',

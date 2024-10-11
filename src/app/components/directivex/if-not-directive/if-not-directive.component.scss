@@ -1,0 +1,18 @@
+:host {
+  display: block;
+}
+
+.content__toggle-actions {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 100px;
+  &__heading {
+    margin-bottom: 10px;
+  }
+  &__action {
+    margin-right: 16px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
