@@ -13,6 +13,7 @@ import { ReadTimeComponent } from "./components/directivex/read-time/read-time.c
 import { VerticalScrollComponent } from './components/directivex/vertical-scroll/vertical-scroll.component';
 import { IfNotDirectiveComponent } from './components/directivex/if-not-directive/if-not-directive.component';
 import { MultiStructuralDirectivesComponent } from "./components/directivex/multi-structural-directives/multi-structural-directives.component";
+import { EnhancedTemplateTypeCheckingComponent } from './components/directivex/enhanced-template-type-checking/enhanced-template-type-checking.component';
 // import { VersionControlComponent } from './cc-setters/version-control/version-control.component';
 
 @Component({
@@ -30,7 +31,8 @@ import { MultiStructuralDirectivesComponent } from "./components/directivex/mult
     ReadTimeComponent,
     VerticalScrollComponent,
     IfNotDirectiveComponent,
-    MultiStructuralDirectivesComponent
+    MultiStructuralDirectivesComponent,
+    EnhancedTemplateTypeCheckingComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

@@ -1,5 +1,11 @@
 import { Directive, ElementRef, Input, OnChanges, SimpleChanges } from '@angular/core';
 
+export enum HighlightColor {
+  Yellow = 'yellow',
+  LightGreen = 'lightgreen',
+  LightCoral = 'lightcoral'
+}
+
 @Directive({
   selector: '[appHighlight]',
   standalone: true
@@ -7,7 +13,7 @@ import { Directive, ElementRef, Input, OnChanges, SimpleChanges } from '@angular
 export class HighlightDirective implements OnChanges {
 
   @Input() highlightText = '';
-  @Input() highlightColor= 'yellow';
+  @Input() highlightColor: HighlightColor = HighlightColor.Yellow;
   originalHTML = '';
 
   constructor(private elmRef: ElementRef) { }
