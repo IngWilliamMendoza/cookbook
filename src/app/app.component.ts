@@ -14,6 +14,7 @@ import { VerticalScrollComponent } from './components/directivex/vertical-scroll
 import { IfNotDirectiveComponent } from './components/directivex/if-not-directive/if-not-directive.component';
 import { MultiStructuralDirectivesComponent } from "./components/directivex/multi-structural-directives/multi-structural-directives.component";
 import { EnhancedTemplateTypeCheckingComponent } from './components/directivex/enhanced-template-type-checking/enhanced-template-type-checking.component';
+import { NgDiTokenComponent } from './components/injection-dep/ng-di-token/ng-di-token.component';
 // import { VersionControlComponent } from './cc-setters/version-control/version-control.component';
 
 @Component({
@@ -32,7 +33,8 @@ import { EnhancedTemplateTypeCheckingComponent } from './components/directivex/e
     VerticalScrollComponent,
     IfNotDirectiveComponent,
     MultiStructuralDirectivesComponent,
-    EnhancedTemplateTypeCheckingComponent
+    EnhancedTemplateTypeCheckingComponent,
+    NgDiTokenComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
